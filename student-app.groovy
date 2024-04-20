@@ -30,7 +30,7 @@ pipeline{
         }
         stage('deploy') {
             steps {
-                sh " sudo cp /var/lib/jenkins/workspace/PROJECT/target/studentapp-2.2-SNAPSHOT.war   /root/apache-tomcat-10.1.20/webapps/ "
+                sh " sudo cp /var/lib/jenkins/workspace/student-app/target/studentapp-ui-app-1.0-SNAPSHOT.jar   /root/tomcat/webapps/ "
                 echo 'deployment is done'
             }
         }
