@@ -18,7 +18,7 @@ pipeline{
             steps {
                sh ''' /opt/apache-maven-3.9.6/bin/mvn sonar:sonar \
                      -Dsonar.projectKey=student-app \
-                     -Dsonar.host.url=http://3.95.19.120:9000 \
+                     -Dsonar.host.url=http://3.87.7.59:9000 \
                      -Dsonar.login=6a120818611d31dc2054bc3c4b904c226fdceb48 '''
 
             }
@@ -30,7 +30,6 @@ pipeline{
         }
         stage('deploy') {
             steps {
-                sh " sudo cp /var/lib/jenkins/workspace/student-app/target/studentapp-ui-app-1.0-SNAPSHOT.jar   /root/tomcat/webapps/ "
                 echo 'deployment is done'
             }
         }
